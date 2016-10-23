@@ -5,7 +5,7 @@
 function to search value on a list, receive two parameters list and value to search
 '''
 
-def pesquise(lis, value):
+def search(lis, value):
     for x,e in enumerate(lis):
         if e == value:
             return x
@@ -15,10 +15,25 @@ L = []
 
 while True:
     V = int(input("Value: "))
-    L.append(V)
     if V == 0:
         break
+    L.append(V)    
     
 V_search = int(input("Search Value: "))
-print(pesquise(L, V_search))
+print(search(L, V_search))
+
+'''
+define the soma and average of a list
+'''
+def soma(L):
+    total=0
+    for e in L:
+        total+=e
+    return total
+
+def media(L):
+    return(soma(L)/len(L))    
+
+print(soma(L))
+print(media(L))
 
